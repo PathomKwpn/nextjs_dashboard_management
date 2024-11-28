@@ -10,6 +10,16 @@ const localizer = momentLocalizer(moment);
 
 const BigCalendar = () => {
   const [view, setView] = useState<View>(Views.WORK_WEEK);
+  const currentDate = new Date();
+
+  console.log(currentDate.getDate());
+  console.log(currentDate.getMonth());
+  console.log(currentDate.getFullYear());
+  console.log(
+    `${currentDate.getFullYear()}-${
+      currentDate.getMonth() + 1
+    }-${currentDate.getDate()}T08:00:00`
+  );
 
   const handleOnChangeView = (selectedView: View) => {
     setView(selectedView);
